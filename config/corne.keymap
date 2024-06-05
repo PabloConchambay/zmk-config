@@ -23,7 +23,7 @@
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp TAB
                   &kp LALT &kp SPACE &mo Fn1   &mo Fn2 &kp BSCP &kp RGUI
-                        >;
+                                   >;
                 };
 
                 Fn1 {
@@ -37,7 +37,7 @@
    &kp TAB   &kp LBKT &kp RBKT &kp LPAR &kp RPAR &tog GMOD    &kp LT &kp N4 &kp N5 &kp N6 &kp PIPE  &trans  
    &kp CARET &kp PLUS &kp MINUS &kp ASTRK &kp BSLH &kp EQUAL  &kp GT &kp N1 &kp N2 &kp N3 &kp UNDER &kp AT
                                 &trans &FSLH &trans  &trans   &kp SHFT &kp RALT
-                        >;
+                                   >;
                 };
 
                 Fn2 { 
@@ -65,7 +65,7 @@
    &kp  SHFT &kp N2 &kp A &kp S &kp D &kp F  &trans &trans &trans &trans &trans &trans
    &kp  CTRL &kp N3 &kp Z &kp X &kp C &kp V  &trans &trans &trans &trans &trans &trans
                 &kp LALT  &kp SPACE  &mo Fn1    &trans &trans &trans
-                        >;
+                                   >;
                 };
 
         };
