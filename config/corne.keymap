@@ -8,8 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #define DEFAULT 0
-#define Fn1   1
-#define Fn2   2
+#define NUMERIC   1
+#define FUNCTION   2
 #define GMOD  3
 
 / {
@@ -26,11 +26,11 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp RET
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp TAB
-                  &kp LALT &kp SPACE &mo (1) &mo (2) &kp BSCP &kp RGUI
+                  &kp LALT &kp SPACE &mo NUMERIC &mo FUNCTION &kp BSCP &kp RGUI
                                    >;
                 };
 
-                Fn1 {
+                NUMERIC {
 // -----------------------------------------------------------------------------------------
 // | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | ENT  |
 // |  TAB  |  [  |  ]  |  (  |  )  | GMOD|   |  <  |  4  |  5  |  6  | "|" | BKSP |
@@ -44,7 +44,7 @@
                                    >;
                 };
 
-                Fn2 { 
+                FUNCTION { 
 // -----------------------------------------------------------------------------------------
 // |      |  F1 | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F0  | F11  |
 // |      |     |     |     |     |     |   |     |     |  UP |     |  ?  |      |
@@ -68,7 +68,7 @@
    &kp  ESC  &kp N1 &kp Q &kp W &kp E &kp R  &trans &trans &trans &trans &trans &trans
    &kp  SHFT &kp N2 &kp A &kp S &kp D &kp F  &trans &trans &trans &trans &trans &trans
    &kp  CTRL &kp N3 &kp Z &kp X &kp C &kp V  &trans &trans &trans &trans &trans &trans
-                &kp LALT  &kp SPACE  &mo (1)    &trans &trans &trans
+                &kp LALT  &kp SPACE  &mo FUNCTION    &trans &trans &trans
                                    >;
                 };
 
