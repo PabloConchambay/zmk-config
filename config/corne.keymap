@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
+// Layer definitions
 #define DEFAULT 0
 #define NUMERIC   1
 #define FUNCTION   2
@@ -16,7 +18,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                default {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | ENT  |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -30,7 +32,7 @@
                                    >;
                 };
 
-                NUMERIC {
+                numeric {
 // -----------------------------------------------------------------------------------------
 // | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | ENT  |
 // |  TAB  |  [  |  ]  |  (  |  )  | GMOD|   |  <  |  4  |  5  |  6  | "|" | BKSP |
@@ -44,7 +46,7 @@
                                    >;
                 };
 
-                FUNCTION { 
+                function { 
 // -----------------------------------------------------------------------------------------
 // |      |  F1 | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F0  | F11  |
 // |      |     |     |     |     |     |   |     |     |  UP |     |  ?  |      |
@@ -58,7 +60,7 @@
                         >;
                 };
 
-                GMOD {
+                gmod {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  Q  |  W  |  E  |  R  |
 // | SHFT |  2  |  A  |  S  |  D  |  F  |
