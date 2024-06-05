@@ -45,7 +45,6 @@
                                 &trans &FSLH &trans  &trans   &kp SHFT &kp RALT
                         >;
                 };
-
                 raise_layer { 
 // -----------------------------------------------------------------------------------------
 // |      |  F1 | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F0  | F11  |
@@ -59,7 +58,6 @@
                         &trans &trans  &kp PSCRN    &trans &trans &trans
                         >;
                 };
-
                 GMOD {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  Q  |  W  |  E  |  R  |
@@ -72,7 +70,6 @@
    &kp  CTRL &kp N3 &kp Z &kp X &kp C &kp V  &trans &trans &trans &trans &trans &trans
                 &kp ALT  &kp SPACE  &mo 1    &trans &trans &trans
                         >;
-
                 };
         };
 };
