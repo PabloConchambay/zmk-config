@@ -8,15 +8,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #define DEFAULT 0
-#define FN1 1
-#define FN2 2
+#define NUMEROS 1
+#define FUNCIONES 2
 #define GMODE 3
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
-                default {
+                DEFAULT {
 // -----------------------------------------------------------------------------------------------------------------------------
 // |        |   Q    |   W    |     F     |     P     |     B     | # |     J     |    L     |    U    |    Y   |   '    |     |
 // | LAYERS | A/LGUI | R/LALT |  S/LCTRL  |  T/LSHFT  |     G     | # |     M     | N/LSHFT  | E/LCTRL | I/LALT | O/LGUI |     |
@@ -27,11 +27,11 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp RET
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp TAB
-                  &mo Fn1 &kp SPACE &kp LALT   &kp BSCP &kp RGUI &mo Fn2
+                  &mo NUMEROS &kp SPACE &kp LALT   &kp BSCP &kp RGUI &mo FUNCIONES
                         >;
         };
 
-                Fn1 {
+                NUMEROS {
 // -----------------------------------------------------------------------------------------
 // | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | ENT  |
 // |  TAB  |  [  |  ]  |  (  |  )  | GMOD|   |  <  |  4  |  5  |  6  | "|" | BKSP |
@@ -45,7 +45,7 @@
                         >;
                 };
 
-                Fn2 { 
+                FUNCIONES { 
 // -----------------------------------------------------------------------------------------
 // |      |  F1 | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F0  | F11  |
 // |      |     |     |     |     |     |   |     |     |  UP |     |  ?  |      |
@@ -69,7 +69,7 @@
    &kp  ESC  &kp N1 &kp Q &kp W &kp E &kp R  &trans &trans &trans &trans &trans &trans
    &kp  SHFT &kp N2 &kp A &kp S &kp D &kp F  &trans &trans &trans &trans &trans &trans
    &kp  CTRL &kp N3 &kp Z &kp X &kp C &kp V  &trans &trans &trans &trans &trans &trans
-                &kp LALT  &kp SPACE  &mo Fn1    &trans &trans &trans
+                &kp LALT  &kp SPACE  &mo NUMEROS    &trans &trans &trans
                         >;
 
                 };
