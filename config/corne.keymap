@@ -24,7 +24,7 @@
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        display-name = "Base";
+                        display-name = "Letras";
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp RET
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -34,23 +34,25 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | ENT  |
-// |  TAB  |  [  |  ]  |  (  |  )  | GMOD|   |  <  |  4  |  5  |  6  | "|" | BKSP |
-// |   ^   |  +  |  -  |  *  |  /  |  =  |   |  >  |  1  |  2  |  3  |  _  |  @   |
-//                    |     |  \  |     |   |     | SHFT|ALTgr|
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        display-name = "Num";
                         bindings = <
    &kp GRAVE &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &kp N6 &kp N7 &kp N8 &kp N9 &kp N0    &trans 
-   &kp TAB   &kp LBKT &kp RBKT &kp LPAR &kp RPAR &tog 3    &kp LT &kp N4 &kp N5 &kp N6 &kp PIPE  &trans  
+   &kp TAB   &kp LBKT &kp RBKT &kp LPAR &kp RPAR &tog GMOD    &kp LT &kp N4 &kp N5 &kp N6 &kp PIPE  &trans  
    &kp CARET &kp PLUS &kp MINUS &kp ASTRK &kp BSLH &kp EQUAL  &kp GT &kp N1 &kp N2 &kp N3 &kp UNDER &kp AT
                                 &trans &FSLH &trans  &trans   &kp SHFT &kp RALT
                         >;
                 };
-                raise_layer { 
+                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  F1 | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F0  | F11  |
-// |      |     |     |     |     |     |   |     |     |  UP |     |  ?  |      |
-// |      | INS | DEL |     |PSCRN| PGUP|   |PGDWN| LFT | DWN | RGT |     | F12  |
-//                    |     |     |     |   |     |     |     |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        display-name = "Func";
                         bindings = <
    &trans &kp F1 &kp F2 &kp F3 &kp  F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
    &trans &trans &trans &trans &btrans &trans       &trans &trans &kp UP &trans &kp QMARK &trans
@@ -60,10 +62,11 @@
                 };
                 GMOD {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  Q  |  W  |  E  |  R  |
-// | SHFT |  2  |  A  |  S  |  D  |  F  |
-// | CTRL |  3  |  Z  |  X  |  C  |  V  |
-//                    | ALT | SPC | FN1 |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        display-name = "Gaming";
                         bindings = <
    &kp  ESC  &kp N1 &kp Q &kp W &kp E &kp R  &trans &trans &trans &trans &trans &trans
    &kp  SHFT &kp N2 &kp A &kp S &kp D &kp F  &trans &trans &trans &trans &trans &trans
