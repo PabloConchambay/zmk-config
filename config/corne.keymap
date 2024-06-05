@@ -12,7 +12,7 @@
 #define FUNCIONES 2
 #define GMODE 3
 
-// {
+{
         keymap {
                 compatible = "zmk,keymap";
 
@@ -49,4 +49,4 @@
                         >;
                 };
         };
-//};
+};
