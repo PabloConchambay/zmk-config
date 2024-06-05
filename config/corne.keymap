@@ -23,11 +23,11 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp RET
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp TAB
-                  &kp ALT &kp SPACE &mo FN1 &mo FN2 &kp BSCP &kp RGUI
+                  &kp LALT &kp SPACE &mo FN1 &mo FN2 &kp BSCP &kp RGUI
             >;
         };
 
-                lower_layer {
+                Fn1 {
 // -----------------------------------------------------------------------------------------
 // | GRAVE |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | ENT  |
 // |  TAB  |  [  |  ]  |  (  |  )  | GMOD|   |  <  |  4  |  5  |  6  | "|" | BKSP |
@@ -41,7 +41,7 @@
                         >;
                 };
 
-                raise_layer { 
+                Fn2 { 
 // -----------------------------------------------------------------------------------------
 // |      |  F1 | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F0  | F11  |
 // |      |     |     |     |     |     |   |     |     |  UP |     |  ?  |      |
