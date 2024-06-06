@@ -37,11 +37,11 @@
    &trans &kp DELETE &kp INSERT &trans &trans  &kp PG_UP    &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans &kp F12
                          &kp PRINTSCREEN &trans &trans    &trans &trans &trans>;
                 };
-                GMOD {
+                GMODE {
                         bindings = <
    &kp  ESC  &kp N1 &kp Q &kp W &kp E &kp R  &trans &trans &trans &trans &trans &trans
-   &kp  SHFT &kp N2 &kp A &kp S &kp D &kp F  &trans &trans &trans &trans &trans &trans
-   &kp  CTRL &kp N3 &kp Z &kp X &kp C &kp V  &trans &trans &trans &trans &trans &trans
+   &kp  LSHFT &kp N2 &kp A &kp S &kp D &kp F  &trans &trans &trans &trans &trans &trans
+   &kp  LCTRL &kp N3 &kp Z &kp X &kp C &kp V  &trans &trans &trans &trans &trans &trans
                 &kp LALT  &kp SPACE  &mo NUMEROS    &trans &trans &trans>;
                 };
         };
