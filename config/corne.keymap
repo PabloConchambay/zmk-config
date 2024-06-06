@@ -28,7 +28,7 @@
    &kp GRAVE &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &kp N6 &kp N7 &kp N8 &kp N9 &kp N0    &trans 
    &kp TAB   &kp LBKT &kp RBKT &kp LPAR &kp RPAR &tog GMODE    &kp LT &kp N4 &kp N5 &kp N6 &kp PIPE  &trans  
    &kp CARET &kp PLUS &kp MINUS &kp ASTRK &kp BSLH &kp EQUAL  &kp GT &kp N1 &kp N2 &kp N3 &kp UNDER &kp AT
-                                      &kp RALT &FSLH &trans   &trans &kp SHFT &kp LALT>;
+                                      &kp RALT &kp FSLH &trans   &trans &kp SHFT &kp LALT>;
                 };
                 FUNCIONES { 
                         bindings = <
