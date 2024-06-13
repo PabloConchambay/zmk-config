@@ -1,12 +1,14 @@
-/ {
-    chosen {
-        zmk,backlight = &backlight;
+&pinctrl {
+    // Other pinctrl definitions for other hardware
+    pwm0_default: pwm0_default {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 13)>;
+        };
     };
-};
-
-&backlight {
-    compatible = "pwm-backlight";
-    pwms = <&pwm0 0 1000000 PWM_POLARITY_NORMAL>;
-    brightness-levels = <0 32 64 128 255>;
-    default-brightness-level = <0>;  // Apagado por defecto
+    pwm0_sleep: pwm0_sleep {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 13)>;
+            low-power-enable;
+        };
+    };
 };
