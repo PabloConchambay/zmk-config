@@ -1,0 +1,12 @@
+/ {
+    chosen {
+        zmk,backlight = &backlight;
+    };
+};
+
+&backlight {
+    compatible = "pwm-backlight";
+    pwms = <&pwm0 0 1000000 PWM_POLARITY_NORMAL>;
+    brightness-levels = <0 32 64 128 255>;
+    default-brightness-level = <3>;
+};
