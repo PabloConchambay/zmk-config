@@ -7,10 +7,75 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
+#include <zmk/event_manager.h>
+#include <zmk/events/keycode_state_changed.h>
+#include <drivers/pwm.h>
+#include <logging/log.h>
+
+LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
+
+
 #define DEFAULT 0
 #define NUMEROS 1
 #define FUNCIONES 2
 #define GMODE 3
+
+#define BACKLIGHT_PWM_NODE DT_NODELABEL(backlight)
+#define BACKLIGHT_PWM DT_PWMS_CTLR(BACKLIGHT_PWM_NODE)
+#define BACKLIGHT_PWM_CHANNEL DT_PWMS_CHANNEL(BACKLIGHT_PWM_NODE)
+#define BACKLIGHT_PWM_PERIOD DT_PWMS_PERIOD(BACKLIGHT_PWM_NODE)
+
+static int backlight_on() {
+    const struct device *pwm_dev = device_get_binding(BACKLIGHT_PWM);
+    if (!pwm_dev) {
+        LOG_ERR("Failed to get PWM device binding");
+        return -ENODEV;
+    }
+
+    int ret = pwm_pin_set_usec(pwm_dev, BACKLIGHT_PWM_CHANNEL, BACKLIGHT_PWM_PERIOD, BACKLIGHT_PWM_PERIOD / 2U, PWM_POLARITY_NORMAL);
+    if (ret) {
+        LOG_ERR("Failed to set PWM: %d", ret);
+    }
+    return ret;
+}
+
+static int backlight_off() {
+    const struct device *pwm_dev = device_get_binding(BACKLIGHT_PWM);
+    if (!pwm_dev) {
+        LOG_ERR("Failed to get PWM device binding");
+        return -ENODEV;
+    }
+
+    int ret = pwm_pin_set_usec(pwm_dev, BACKLIGHT_PWM_CHANNEL, BACKLIGHT_PWM_PERIOD, 0, PWM_POLARITY_NORMAL);
+    if (ret) {
+        LOG_ERR("Failed to set PWM: %d", ret);
+    }
+    return ret;
+}
+
+static int keycode_state_changed_listener(const zmk_event_t *eh) {
+    const struct zmk_keycode_state_changed *ev = as_zmk_keycode_state_changed(eh);
+
+    if (ev == NULL) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    // Cambia este valor al código de la tecla que deseas iluminar.
+    uint32_t target_keycode = HID_USAGE_KEY_A; 
+
+    if (ev->keycode == target_keycode) {
+        if (ev->state) {
+            backlight_on();
+        } else {
+            backlight_off();
+        }
+    }
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(keycode_state_changed_listener, keycode_state_changed_listener);
+ZMK_SUBSCRIPTION(keycode_state_changed_listener, zmk_keycode_state_changed);
 
 /{
         keymap {
