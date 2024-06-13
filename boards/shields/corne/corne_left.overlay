@@ -1,3 +1,11 @@
+/ {
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        pwm_led_0 {
+            pwms = <&pwm0 0 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
+        };
+    };
+};
 &pinctrl {
     // Other pinctrl definitions for other hardware
     pwm0_default: pwm0_default {
@@ -11,4 +19,10 @@
             low-power-enable;
         };
     };
+};
+&pwm0 {
+    status = "okay";
+    pinctrl-0 = <&pwm0_default>;
+    pinctrl-1 = <&pwm0_sleep>;
+    pinctrl-names = "default", "sleep";
 };
