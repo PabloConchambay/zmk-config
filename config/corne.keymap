@@ -55,7 +55,7 @@
                         label = "Config";
                         bindings = <
    &kp  ESC   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5    &trans &trans &trans &trans &trans &trans
-   &kp  LSHFT &bt BT_CLR   &bt BT_PRV   &bt BT_NXT   &out OUT_TOG &trans          &trans &trans &trans &trans &trans &trans
+   &kp  LSHFT &bt BT_CLR   &bt BT_PRV   &bt BT_NXT   &trans &trans          &trans &trans &trans &trans &trans &trans
    &kp  LCTRL &kp N3       &kp Z        &kp X        &kp C        &kp V           &trans &trans &trans &trans &trans &trans
                                         &kp LALT     &kp SPACE    &kp TAB         &trans &trans &trans>;
                 };
